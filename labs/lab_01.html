@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 - Git Tutorials</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="animation-fade-in">
+    <!-- Sidebar Menu -->
+    <div id="menu">
+        <p class="link-home">
+            <a href="../index.html" style="color: #fff;">Git Tutorials</a>
+        </p>
+        <nav>
+            <ol>
+                <li><a href="lab_00.html" class="active">Introduction</a></li>
+                <li><a href="lab_01.html" class="active">Setup</a></li>
+                <li><a href="lab_02.html">More Setup</a></li>
+                <li><a href="lab_03.html">Create a Project</a></li>
+                <!-- Add other lab links here -->
+                <li><a href="lab_53.html">Thank You</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content">
+        <h1 class="lab_title"><em>Lab 1</em> Setup</h1>
+        
+        <h2>1. Goals</h2>
+        <ul>
+            <li>To setup Git and get it ready for work.</li>
+        </ul>
+
+        <h2>2. Setup Name and Email</h2>
+        <p>Run the following commands so that Git knows your name and email:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git config --global user.name "Your Name"</pre>
+            <pre>git config --global user.email "your_email@whatever.com"</pre>
+        </div>
+
+        <h2>3. Setup Line Ending Preferences</h2>
+        <p>For Unix/Mac users:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git config --global core.autocrlf input</pre>
+            <pre>git config --global core.safecrlf true</pre>
+        </div>
+        <p>For Windows users:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git config --global core.autocrlf true</pre>
+            <pre>git config --global core.safecrlf true</pre>
+        </div>
+
+        <h2>4. Setup R</h2>
+        <p>You need a working R. If you haven’t installed it, get it from:</p>
+        <p><a href="https://google.com">R Downloads</a></p>
+
+        <!-- Navigation between labs -->
+        <nav class="foot-navigation">
+            <a class="start" href="lab_02.html">Prev</a>
+            <a class="start" href="lab_02.html">Next</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>❤️ Maintained with love for our dear friend <a href="https://en.wikipedia.org/wiki/Jim_Weirich" target="_blank">Jim Weirich</a>.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

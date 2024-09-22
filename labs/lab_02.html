@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Git Immersion</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="animation-fade-in">
+    <!-- Sidebar Menu -->
+    <div id="menu">
+        <p class="link-home">
+            <a href="../index.html" style="color: #fff;">Git Tutorials</a>
+        </p>
+        <nav>
+            <ol>
+                <li><a href="lab_00.html" class="active">Introduction</a></li>
+                <li><a href="lab_01.html">Setup</a></li>
+                <li><a href="lab_02.html" class="active">Create a Project</a></li>
+                <li><a href="lab_03.html">More Setup</a></li>
+                <!-- Add other lab links here -->
+                <li><a href="lab_53.html">Thank You</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content">
+        <h1 class="lab_title"><em>Lab 2</em> Create a Project</h1>
+        
+        <h2>Goals</h2>
+        <ul>
+            <li>Learn how to create a Git repository from scratch.</li>
+        </ul>
+
+        <h2>Create a “Hello, World” program</h2>
+        <p>Starting in the empty working directory, create an empty directory named “hello”, then create a file named <code>hello.r</code> with the contents below.</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>mkdir hello</pre>
+            <pre>cd hello</pre>
+        </div>
+        
+        <h3 class="file-heading clickable" title="Click to copy"><em>hello.r</em></h3>
+        <pre class="file">puts "Hello, World"</pre>
+
+        <h2>Create the Repository</h2>
+        <p>You now have a directory with a single file. To create a Git repository from that directory, run the git init command.</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git init</pre>
+        </div>
+        
+        <h3><b>Output:</b></h3>
+        <pre class="sample">$ git init
+Initialized empty Git repository in /path/to/your/hello/.git/</pre>
+
+        <h2>Add the program to the repository</h2>
+        <p>Now let’s add the “Hello, World” program to the repository.</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git add hello.r</pre>
+            <pre>git commit -m "First Commit"</pre>
+        </div>
+        
+        <h3><b>Output:</b></h3>
+        <pre class="sample">$ git add hello.r
+$ git commit -m "First Commit"
+[main (root-commit) f7c41d3] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.r</pre>
+
+        <!-- Navigation between labs -->
+        <nav class="foot-navigation">
+            <a class="start" href="lab_01.html">Prev</a>
+            <a class="start" href="lab_03.html">Next</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>❤️ Maintained with love for our dear friend <a href="https://en.wikipedia.org/wiki/Jim_Weirich" target="_blank">Jim Weirich</a>.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
