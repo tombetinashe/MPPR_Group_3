@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Submissions</title>
+</head>
+<body>
+    <h1>Welcome to the Student Submission Portal</h1>
+    <p>Instructions for students:</p>
+    <ol>
+        <li>Clone this repository.</li>
+        <li>Create a text file named after your student ID (e.g., `student123.txt`).</li>
+        <li>Add your content and push the file to the repository.</li>
+    </ol>
+    <h2>Recent Submissions:</h2>
+    <div id="submissions">
+        <!-- Text file submissions will be loaded here -->
+    </div>
+
+    <script>
+        fetch("https://api.github.com/repos/yourusername/student-work-submissions/contents/")
+            .then(response => response.json())
+            .then(data => {
+                const submissionsDiv = document.getElementById("submissions");
+                data.forEach(file => {
+                    if (file.name.endsWith(".txt")) {
+                        const fileLink = document.createElement("a");
+                        fileLink.href = file.download_url;
+                        fileLink.textContent = file.name;
+                        submissionsDiv.appendChild(fileLink);
+                        submissionsDiv.appendChild(document.createElement("br"));
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
