@@ -5,6 +5,9 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;               /* Add flex display to body */
+    flex-direction: column;      /* Stack children vertically */
+    min-height: 100vh;          /* Ensure full height */
 }
 
 h1 {
@@ -24,9 +27,8 @@ p {
     color: #eee;
     padding: 20px;
     text-align: center;
-    position: fixed;
+    position: relative;         /* Change to relative for normal flow */
     width: 100%;
-    bottom: 0;
 }
 
 .footer a {
@@ -60,7 +62,6 @@ a.start {
     font-size: 18px;
     text-decoration: none;
     margin: 20px auto;
-    display: block;
     width: fit-content;
     border-radius: 5px;
 }
@@ -89,6 +90,67 @@ ol {
     margin: 0 auto;
 }
 
+/* Sidebar Menu Styles */
+.layout {
+    display: flex;
+}
+
+#menu {
+    background-color: #990000;
+    padding: 20px;
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+#menu nav ol {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+#menu nav ol li {
+    margin: 20px 0;
+}
+
+#menu nav ol li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu nav ol li a:hover {
+    text-decoration: underline;
+}
+
+#content {
+    flex: 1;                   /* Allow content to grow */
+    padding: 20px;
+    margin-left: 270px;       /* Keep sidebar space */
+    max-width: 800px;         /* Set max width for content */
+    margin: 20px auto;        /* Center content */
+}
+
+#content h1, #content h2, #content p {
+    text-align: left;
+}
+
+#content .instructions pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.foot-navigation {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Animation */
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
