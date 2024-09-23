@@ -1,6 +1,6 @@
 // js/script.js
 
-fetch("https://api.github.com/repos/vincentsd/GWAC-MPPR/submissions/contents/")
+fetch("https://api.github.com/repos/vincentsd/GWAC-MPPR/contents/submissions/")
     .then(response => response.json())
     .then(data => {
         const submissionsDiv = document.getElementById("submissions");
