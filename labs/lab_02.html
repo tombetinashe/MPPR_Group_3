@@ -14,7 +14,7 @@
         </p>
         <nav>
             <ol>
-                <li><a href="lab_00.html" class="active">Introduction</a></li>
+                <li><a href="lab_00.html">Introduction</a></li>
                 <li><a href="lab_01.html">Setup</a></li>
                 <li><a href="lab_02.html" class="active">Create a Project</a></li>
                 <li><a href="lab_03.html">More Setup</a></li>
@@ -26,27 +26,33 @@
 
     <!-- Main Content Area -->
     <div id="content">
-        <h1 class="lab_title"><em>Lab 2</em> Create a Project</h1>
+        <h1 class="lab_title"><em>Lab 2: </em> Create a Project</h1>
         
         <h2>Goals</h2>
         <ul>
             <li>Learn how to create a Git repository from scratch.</li>
+            <li>Understand basic Git commands: <code>git init</code>, <code>git status</code>, <code>git add</code>, <code>git commit</code>.</li>
         </ul>
 
-        <h2>Create a “Hello, World” program</h2>
-        <p>Starting in the empty working directory, create an empty directory named “hello”, then create a file named <code>hello.r</code> with the contents below.</p>
+        <h2>Creating a New Project: ProjectR</h2>
+        <p>In this lab, we will create a new project called <strong>ProjectR</strong>. This project will contain a simple R script that demonstrates the basic usage of Git.</p>
         
+        <h3>Create the Project Directory</h3>
+        <p>First, create a directory for the project:</p>
         <h3><b>Execute:</b></h3>
         <div class="instructions">
-            <pre>mkdir hello</pre>
-            <pre>cd hello</pre>
+            <pre>mkdir ProjectR</pre>
+            <pre>cd ProjectR</pre>
         </div>
+
+        <h3>Create the R Script</h3>
+        <p>Next, create a file named <code>hello.R</code> with the following content:</p>
         
-        <h3 class="file-heading clickable" title="Click to copy"><em>hello.r</em></h3>
-        <pre class="file">puts "Hello, World"</pre>
+        <h3 class="file-heading clickable" title="Click to copy"><em>hello.R</em></h3>
+        <pre class="file">puts "Hello, ProjectR!"</pre>
 
         <h2>Create the Repository</h2>
-        <p>You now have a directory with a single file. To create a Git repository from that directory, run the git init command.</p>
+        <p>Now, initialize a Git repository in the <strong>ProjectR</strong> directory:</p>
         
         <h3><b>Execute:</b></h3>
         <div class="instructions">
@@ -55,23 +61,69 @@
         
         <h3><b>Output:</b></h3>
         <pre class="sample">$ git init
-Initialized empty Git repository in /path/to/your/hello/.git/</pre>
+Initialized empty Git repository in /path/to/your/ProjectR/.git/</pre>
 
-        <h2>Add the program to the repository</h2>
-        <p>Now let’s add the “Hello, World” program to the repository.</p>
+        <h2>Check Git Status</h2>
+        <p>Before adding files, check the status of your repository:</p>
         
         <h3><b>Execute:</b></h3>
         <div class="instructions">
-            <pre>git add hello.r</pre>
-            <pre>git commit -m "First Commit"</pre>
+            <pre>git status</pre>
+        </div>
+
+        <h3><b>Output:</b></h3>
+        <pre class="sample">$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    hello.R
+
+nothing added to commit but untracked files present (use "git add" to track)</pre>
+
+        <h2>Add the R Script to the Repository</h2>
+        <p>Now let’s add the <code>hello.R</code> script to the repository:</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git add hello.R</pre>
+        </div>
+        
+        <h3>Check the Status Again</h3>
+        <p>After adding the file, check the status again:</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git status</pre>
+        </div>
+
+        <h3><b>Output:</b></h3>
+        <pre class="sample">$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file:   hello.R</pre>
+
+        <h2>Commit the R Script</h2>
+        <p>Finally, commit the changes to the repository:</p>
+        
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git commit -m "Add hello.R script"</pre>
         </div>
         
         <h3><b>Output:</b></h3>
-        <pre class="sample">$ git add hello.r
-$ git commit -m "First Commit"
-[main (root-commit) f7c41d3] First Commit
+        <pre class="sample">$ git commit -m "Add hello.R script"
+[master (root-commit) abc1234] Add hello.R script
  1 file changed, 1 insertion(+)
- create mode 100644 hello.r</pre>
+ create mode 100644 hello.R</pre>
 
         <!-- Navigation between labs -->
         <nav class="foot-navigation">
