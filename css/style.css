@@ -5,9 +5,9 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;               /* Add flex display to body */
-    flex-direction: column;      /* Stack children vertically */
-    min-height: 100vh;          /* Ensure full height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -27,7 +27,7 @@ p {
     color: #eee;
     padding: 20px;
     text-align: center;
-    position: relative;         /* Change to relative for normal flow */
+    position: relative;
     width: 100%;
 }
 
@@ -127,11 +127,11 @@ ol {
 }
 
 #content {
-    flex: 1;                   /* Allow content to grow */
+    flex: 1;
     padding: 20px;
-    margin-left: 270px;       /* Keep sidebar space */
-    max-width: 800px;         /* Set max width for content */
-    margin: 20px auto;        /* Center content */
+    margin-left: 270px;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 #content h1, #content h2, #content p {
@@ -165,11 +165,11 @@ nav ol li a {
 }
 
 nav ol li a.inactive {
-    opacity: 0.5; /* Fade out unselected items */
+    opacity: 0.5;
 }
 
 nav ol li a.active {
-    opacity: 1; /* Fully visible for the selected item */
+    opacity: 1;
 }
 
 /* Modal Styles */
@@ -242,4 +242,86 @@ nav ol li a.active {
     width: 500px !important;
     margin: 20px 0;
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #menu {
+        width: 220px;
+    }
+
+    #content {
+        margin-left: 240px;
+    }
+
+    #submissions, ol {
+        width: 90%;
+    }
+
+    .image-section img {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    #menu {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+    }
+
+    #content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    #submissions {
+        width: 100%;
+    }
+
+    ol {
+        width: 100%;
+    }
+
+    .image-section img {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p, .footer, a.start {
+        font-size: 16px;
+    }
+
+    #menu {
+        padding: 10px;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    a.start {
+        padding: 8px 16px;
+    }
+
+    #submissions {
+        padding: 10px;
+    }
+
+    .image-section img {
+        width: 100% !important;
+    }
 }

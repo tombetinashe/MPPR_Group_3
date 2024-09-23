@@ -20,10 +20,14 @@
                 <li><a href="lab_03.html" class="inactive">Collaboration</a></li>
                 <li><a href="lab_04.html" class="inactive">Merge Conflicts</a></li>
                 <li><a href="lab_05.html" class="inactive">Git Commands Cheat Sheet</a></li>
-                <!-- Add other lab links here -->
                 <li><a href="lab_10.html" class="inactive">Thank You</a></li>
             </ol>
         </nav>
+    </div>
+
+    <!-- Breadcrumb (for mobile) -->
+    <div id="breadcrumb">
+        <a href="../index.html">Git Tutorials</a> > <a href="lab_00.html">Introduction</a>
     </div>
 
     <!-- Main Content Area -->
@@ -31,25 +35,19 @@
         <h1 class="lab_title"><em>Lab 0: </em> Introduction to Version Control (Git)</h1>
         
         <h2>What is Git?</h2>
-        <p>
-            Git is a distributed version control system that allows multiple developers to work on a project simultaneously without interfering with each other's changes. It tracks changes in source code during software development, helping teams collaborate efficiently.
-        </p>
-        <p>
-            Git is the most popular and widely used version control system today. Its distributed nature means that every developer has a full copy of the project, including its history, which allows for greater collaboration and fewer risks of data loss.
-        </p>
-        <p>
-            Take some time to read the <a href="https://tom.preston-werner.com/2009/05/19/the-git-parable">Git Parable</a>.
-        </p>
+        <p>Git is a distributed version control system that allows multiple developers to work on a project simultaneously without interfering with each other's changes. It tracks changes in source code during software development, helping teams collaborate efficiently.</p>
+        <p>Git is the most popular and widely used version control system today...</p>
+        <p><a href="https://tom.preston-werner.com/2009/05/19/the-git-parable">Git Parable</a></p>
 
-        <!-- Images with captions and modal -->
+        <!-- Image section -->
         <div class="image-section">
             <p><strong>This is not Git:</strong></p>
-            <img id="img1" src="https://git-scm.com/book/en/v2/images/deltas.png" alt="This is not Git" style="width:300px; cursor:pointer;">
+            <img id="img1" src="https://git-scm.com/book/en/v2/images/deltas.png" alt="This is not Git" style="width:300px;">
             <p><strong>This is Git:</strong></p>
-            <img id="img2" src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="This is Git" style="width:300px; cursor:pointer;">
+            <img id="img2" src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="This is Git" style="width:300px;">
         </div>
 
-        <!-- Modal for displaying both images -->
+        <!-- Modal -->
         <div id="modal" class="modal">
             <span class="close" id="close">&times;</span>
             <div class="modal-body">
@@ -64,14 +62,6 @@
             </div>
         </div>
 
-        <h2>Why Use Git?</h2>
-        <ul>
-            <li><strong>Version Control:</strong> Keep track of changes and revert to previous versions if necessary.</li>
-            <li><strong>Collaboration:</strong> Facilitate teamwork by merging changes from different contributors.</li>
-            <li><strong>Branching:</strong> Experiment with new features in isolated branches without affecting the main codebase.</li>
-            <li><strong>Backup:</strong> Keep your code safe on remote repositories like GitHub or GitLab.</li>
-        </ul>
-
         <!-- Navigation between labs -->
         <nav class="foot-navigation">
             <a class="start" href="../index.html">Home</a>
@@ -84,5 +74,6 @@
         <p>This is an adaptation of GitImmersion ️️❤️  Maintained for GWAC-MPPR</p>
     </div>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>

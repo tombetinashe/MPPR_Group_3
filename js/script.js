@@ -38,11 +38,16 @@ const modalImg1 = document.getElementById("modalImg1");
 const modalImg2 = document.getElementById("modalImg2");
 const close = document.getElementById("close");
 
-// Show modal when either image is clicked
-img1.onclick = img2.onclick = function() {
+// Show modal when img1 is clicked
+img1.onclick = function() {
     modal.style.display = "block";
-    modalImg1.src = img1.src;
-    modalImg2.src = img2.src;
+    modalImg1.src = img1.src; // Set the src of the modal image 1
+}
+
+// Show modal when img2 is clicked
+img2.onclick = function() {
+    modal.style.display = "block";
+    modalImg2.src = img2.src; // Set the src of the modal image 2
 }
 
 // Close the modal
