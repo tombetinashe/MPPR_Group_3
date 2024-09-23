@@ -30,23 +30,6 @@
     <div id="content">
         <h1 class="lab_title"><em>Lab 0: </em> Introduction to Version Control (Git)</h1>
         
-        <!-- New Section: Introduction to Version Control -->
-        <h2>What is Version Control?</h2>
-        <p>
-            Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It is essential for any team or individual working on software development, document management, or even graphic design. 
-        </p>
-        <p>
-            Think of version control as an organized way to manage multiple versions of your project. Instead of manually saving your files with different names like "project_v1," "project_final," and "project_final_final," version control systems (VCS) allow you to track every change automatically.
-        </p>
-
-        <h2>Examples of Version Control Systems</h2>
-        <ul>
-            <li><strong>Local Version Control:</strong> This method involves keeping copies of your files on your local system. An example is saving files with different version names manually.</li>
-            <li><strong>Centralized Version Control:</strong> In centralized VCS, such as Subversion (SVN) or CVS, a single server contains all versioned files, and clients check out files from this central place.</li>
-            <li><strong>Distributed Version Control:</strong> A distributed VCS, such as Git or Mercurial, allows multiple developers to work with their own local repositories and later merge changes back to the main repository. This method provides more flexibility and safety since every copy of the project acts as a backup.</li>
-        </ul>
-
-        <!-- Original Git Introduction -->
         <h2>What is Git?</h2>
         <p>
             Git is a distributed version control system that allows multiple developers to work on a project simultaneously without interfering with each other's changes. It tracks changes in source code during software development, helping teams collaborate efficiently.
@@ -58,6 +41,29 @@
             Take some time to read the <a href="https://tom.preston-werner.com/2009/05/19/the-git-parable">Git Parable</a>.
         </p>
 
+        <!-- Images with captions and modal -->
+        <div class="image-section">
+            <p><strong>This is not Git:</strong></p>
+            <img id="img1" src="https://git-scm.com/book/en/v2/images/deltas.png" alt="This is not Git" style="width:300px; cursor:pointer;">
+            <p><strong>This is Git:</strong></p>
+            <img id="img2" src="https://git-scm.com/book/en/v2/images/snapshots.png" alt="This is Git" style="width:300px; cursor:pointer;">
+        </div>
+
+        <!-- Modal for displaying both images -->
+        <div id="modal" class="modal">
+            <span class="close" id="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-caption" id="caption1">This is not Git: Deltas method</div>
+                    <img class="modal-content" id="modalImg1">
+                </div>
+                <div class="modal-image-section">
+                    <div class="modal-caption" id="caption2">This is Git: Snapshots method</div>
+                    <img class="modal-content" id="modalImg2">
+                </div>
+            </div>
+        </div>
+
         <h2>Why Use Git?</h2>
         <ul>
             <li><strong>Version Control:</strong> Keep track of changes and revert to previous versions if necessary.</li>
@@ -65,17 +71,6 @@
             <li><strong>Branching:</strong> Experiment with new features in isolated branches without affecting the main codebase.</li>
             <li><strong>Backup:</strong> Keep your code safe on remote repositories like GitHub or GitLab.</li>
         </ul>
-
-        <h2>Key Concepts</h2>
-        <ul>
-            <li><strong>Repository:</strong> A directory where your project lives, containing all files and their history.</li>
-            <li><strong>Commit:</strong> A snapshot of your project at a certain point in time, including a message describing the changes.</li>
-            <li><strong>Branch:</strong> A separate line of development that allows you to work on different features or fixes.</li>
-            <li><strong>Merge:</strong> Combining changes from different branches into a single branch.</li>
-        </ul>
-
-        <h2>Getting Started</h2>
-        <p>In the upcoming labs, you will learn how to set up Git, configure your environment, and start using it for your projects.</p>
 
         <!-- Navigation between labs -->
         <nav class="foot-navigation">
@@ -89,7 +84,5 @@
         <p>This is an adaptation of GitImmersion ️️❤️  Maintained for GWAC-MPPR</p>
     </div>
 
-    <!-- JavaScript -->
-    <script src="../js/script.js"></script>
 </body>
 </html>

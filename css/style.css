@@ -172,3 +172,74 @@ nav ol li a.active {
     opacity: 1; /* Fully visible for the selected item */
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.99);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-caption {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image-section {
+    margin-bottom: 20px;
+}
+
+.modal-image-section img {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 10px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-section img {
+    width: 500px !important;
+    margin: 20px 0;
+    cursor: pointer;
+}
