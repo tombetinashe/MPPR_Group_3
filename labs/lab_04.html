@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Handling Merge Conflicts</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="animation-fade-in">
+    <!-- Sidebar Menu -->
+    <div id="menu">
+        <p class="link-home">
+            <a href="../index.html" style="color: #fff;">Git Tutorials</a>
+        </p>
+        <nav>
+            <ol>
+                <li><a href="lab_00.html" class="inactive">Introduction</a></li>
+                <li><a href="lab_01.html" class="inactive">Setup</a></li>
+                <li><a href="lab_02.html" class="inactive">Create a Project</a></li>
+                <li><a href="lab_03.html" class="inactive">Collaboration</a></li>
+                <li><a href="lab_04.html" class="active">Merge Conflicts</a></li>
+                <!-- Add other lab links here -->
+                <li><a href="lab_53.html" class="inactive">Thank You</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content">
+        <h1 class="lab_title"><em>Lab 4: </em> Handling Merge Conflicts</h1>
+        
+        <h2>Understanding Merge Conflicts</h2>
+        <p>When multiple contributors are working on the same file, they may encounter merge conflicts. A merge conflict occurs when two branches have changes to the same line in a file, or when a file is deleted in one branch while being modified in another.</p>
+
+        <h2>Exercise: Adding Names to the Participants List</h2>
+        <p>Your task is to add your name to the participants list in the README file of the <a href="https://github.com/VincentSD/GWAC-MPPR.git">GWAC-MPPR repository</a>.</p>
+        <p>Follow these steps:</p>
+
+        <h3><b>1. Clone the Repository</b></h3>
+        <pre>git clone https://github.com/VincentSD/GWAC-MPPR.git</pre>
+
+        <h3><b>2. Create a New Branch</b></h3>
+        <pre>git checkout -b your-name</pre>
+
+        <h3><b>3. Edit the README.md</b></h3>
+        <p>Add your name to the participants list:</p>
+        <pre>
+## Participants
+1. Vincent Donkoh
+2. Your Name
+</pre>
+
+        <h3><b>4. Commit Your Changes</b></h3>
+        <pre>git add README.md</pre>
+        <pre>git commit -m "Add my name to participants"</pre>
+
+        <h3><b>5. Push Your Branch</b></h3>
+        <pre>git push origin your-name</pre>
+
+        <h3><b>6. Create a Pull Request</b></h3>
+        <p>Navigate to the repository on GitHub and create a pull request for your branch.</p>
+
+        <h2>What to Expect</h2>
+        <p>As multiple students add their names, some may encounter merge conflicts. Here’s how to resolve them:</p>
+        <h3><b>Resolving Merge Conflicts</b></h3>
+        <ol>
+            <li>When you create a pull request, GitHub will notify you if there are merge conflicts.</li>
+            <li>Fetch the latest changes from the main branch:</li>
+            <pre>git fetch origin</pre>
+            <pre>git merge origin/main</pre>
+            <li>If there are conflicts, Git will highlight the areas in the README.md file that need your attention.</li>
+            <li>Edit the file to resolve the conflicts, choosing which changes to keep or combining them as necessary.</li>
+            <li>After resolving, stage the changes and commit:</li>
+            <pre>git add README.md</pre>
+            <pre>git commit -m "Resolve merge conflicts"</pre>
+            <li>Finally, push your changes:</li>
+            <pre>git push origin your-name</pre>
+            <li>Your pull request will now be updated with the resolved changes.</li>
+        </ol>
+
+        <!-- Navigation between labs -->
+        <nav class="foot-navigation">
+            <a class="start" href="lab_03.html">Prev</a>
+            <a class="start" href="lab_05.html">Next</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>This is an adaptation of GitImmersion ️️❤️  Maintaine for GWAC-MPPR</p>
+    </div>
+</body>
+</html>
