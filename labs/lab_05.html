@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Git Commands Cheat Sheet</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="animation-fade-in">
+    <!-- Sidebar Menu -->
+    <div id="menu">
+        <p class="link-home">
+            <a href="../index.html" style="color: #fff;">Git Tutorials</a>
+        </p>
+        <nav>
+            <ol>
+                <li><a href="lab_00.html" class="inactive">Introduction</a></li>
+                <li><a href="lab_01.html" class="inactive">Setup</a></li>
+                <li><a href="lab_02.html" class="inactive">Create a Project</a></li>
+                <li><a href="lab_03.html" class="inactive">Collaboration</a></li>
+                <li><a href="lab_04.html" class="inactive">Merge Conflicts</a></li>
+                <li><a href="lab_05.html" class="active">Git Commands Cheat Sheet</a></li>
+                <!-- Add other lab links here -->
+                <li><a href="lab_10.html" class="inactive">Thank You</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content">
+        <h1 class="lab_title"><em>Lab 5: </em> Git Commands Cheat Sheet</h1>
+        
+        <h2>Basic Git Commands</h2>
+        <p>Here is a summary of the most commonly used Git commands, along with their purposes.</p>
+
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: left;">
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>git init</code></td>
+                    <td>Initializes a new Git repository in your project directory. Run this in a directory to start version control.</td>
+                </tr>
+                <tr>
+                    <td><code>git clone &lt;url&gt;</code></td>
+                    <td>Copies a remote repository (from platforms like GitHub) to your local machine. Example: <code>git clone https://github.com/username/repo.git</code></td>
+                </tr>
+                <tr>
+                    <td><code>git add &lt;file&gt;</code></td>
+                    <td>Adds changes in the working directory to the staging area, preparing them for a commit. Example: <code>git add README.md</code></td>
+                </tr>
+                <tr>
+                    <td><code>git add .</code></td>
+                    <td>Adds all changes in the current directory (and subdirectories) to the staging area.</td>
+                </tr>
+                <tr>
+                    <td><code>git commit -m "message"</code></td>
+                    <td>Records changes in the repository with a descriptive message. Example: <code>git commit -m "Add README file"</code></td>
+                </tr>
+                <tr>
+                    <td><code>git status</code></td>
+                    <td>Displays the state of your working directory and staging area, showing which files are staged for commit, modified, or untracked.</td>
+                </tr>
+                <tr>
+                    <td><code>git log</code></td>
+                    <td>Displays the history of commits in the current branch. Each commit includes a unique ID, author, date, and commit message.</td>
+                </tr>
+                <tr>
+                    <td><code>git branch</code></td>
+                    <td>Lists all branches in your repository. The current branch is marked with an asterisk (*).</td>
+                </tr>
+                <tr>
+                    <td><code>git checkout &lt;branch-name&gt;</code></td>
+                    <td>Switches to a specified branch. Example: <code>git checkout feature-branch</code></td>
+                </tr>
+                <tr>
+                    <td><code>git checkout -b &lt;new-branch-name&gt;</code></td>
+                    <td>Creates a new branch and switches to it immediately. Example: <code>git checkout -b new-feature</code></td>
+                </tr>
+                <tr>
+                    <td><code>git merge &lt;branch-name&gt;</code></td>
+                    <td>Merges the changes from the specified branch into the current branch. Example: <code>git merge feature-branch</code></td>
+                </tr>
+                <tr>
+                    <td><code>git pull</code></td>
+                    <td>Fetches the latest changes from the remote repository and merges them into your current branch. Example: <code>git pull origin main</code></td>
+                </tr>
+                <tr>
+                    <td><code>git push</code></td>
+                    <td>Uploads your local commits to the remote repository. Example: <code>git push origin main</code></td>
+                </tr>
+                <tr>
+                    <td><code>git remote -v</code></td>
+                    <td>Displays the URLs of the remote repositories that are configured in your Git project.</td>
+                </tr>
+                <tr>
+                    <td><code>git fetch</code></td>
+                    <td>Downloads objects and refs from another repository, but doesn't merge them. Useful for checking changes without modifying your working directory.</td>
+                </tr>
+                <tr>
+                    <td><code>git reset --hard</code></td>
+                    <td>Resets your working directory and index to the last commit, discarding all local changes.</td>
+                </tr>
+                <tr>
+                    <td><code>git stash</code></td>
+                    <td>Temporarily saves your changes, cleaning your working directory. Use <code>git stash pop</code> to reapply them later.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Branching and Merging</h2>
+        <ul>
+            <li><code>git branch &lt;branch-name&gt;</code> - Creates a new branch.</li>
+            <li><code>git branch -d &lt;branch-name&gt;</code> - Deletes a specified branch.</li>
+            <li><code>git merge &lt;branch-name&gt;</code> - Merges the specified branch into the current branch.</li>
+        </ul>
+
+        <h2>Remotes and Collaboration</h2>
+        <ul>
+            <li><code>git remote add origin &lt;url&gt;</code> - Links your local repository to a remote one.</li>
+            <li><code>git fetch origin</code> - Fetches changes from the remote repository without merging.</li>
+            <li><code>git pull origin &lt;branch-name&gt;</code> - Fetches and merges changes from the remote branch.</li>
+            <li><code>git push origin &lt;branch-name&gt;</code> - Pushes your changes to the remote repository.</li>
+        </ul>
+
+        <!-- Navigation between labs -->
+        <nav class="foot-navigation">
+            <a class="start" href="lab_04.html">Prev</a>
+            <a class="start" href="lab_10.html">Next</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>This is an adaptation of GitImmersion ️️❤️  Maintained for GWAC-MPPR</p>
+    </div>
+</body>
+</html>

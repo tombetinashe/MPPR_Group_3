@@ -15,12 +15,13 @@
 
     <p>Git is a powerful, sophisticated system for distributed version control. Gaining an understanding of its features opens to developers a new and liberating approach to source code management. The surest path to mastering Git is to immerse oneself in its utilities and operations, to experience it first-hand.</p>
 
-    <ul>
-      <li><a href="http://git-scm.com/download" target="_blank" rel="noopener">Install Git</a></li>
-      <li><a href="https://git-scm.com/downloads/guis" target="_blank" rel="noopener">Graphical Clients</a></li>
-      <li><a href="https://github.com/edgecase/git_immersion/issues" target="_blank" rel="noopener">Report an Issue</a></li>
-    </ul>
-
+    <div>
+        <ul>
+            <li><a href="http://git-scm.com/download" target="_blank" rel="noopener">Install Git</a></li>
+            <li><a href="https://git-scm.com/downloads/guis" target="_blank" rel="noopener">Graphical Clients</a></li>
+            <li><a href="https://github.com/edgecase/git_immersion/issues" target="_blank" rel="noopener">Report an Issue</a></li>
+        </ul>
+    </div>
     <a class="start" href="labs/lab_00.html">Start Git</a>
 
     <div class="footer">
@@ -51,8 +52,16 @@
         </table>
     </div>
 
+    <div>
+        <h2>Participants List:</h2>
+        <ul id="participants">
+            <!-- Participants will be loaded here -->
+        </ul>
+    </div>
+
     <!-- Link to external JavaScript file -->
     <script>
+        // Fetch submissions
         fetch("https://api.github.com/repos/vincentsd/GWAC-MPPR/contents/submissions/")
             .then(response => response.json())
             .then(data => {
@@ -65,8 +74,6 @@
                         nameCell.textContent = file.name;
                         row.appendChild(nameCell);
 
-                        // For demonstration, you can set the submission time
-                        // Here we just use the current time for illustration
                         const timeCell = document.createElement("td");
                         timeCell.textContent = new Date().toLocaleString();
                         row.appendChild(timeCell);
@@ -83,6 +90,24 @@
                 });
             })
             .catch(error => console.error('Error fetching submissions:', error));
+
+        // Fetch participants from README
+        fetch("https://api.github.com/repos/vincentsd/GWAC-MPPR/contents/README.md")
+            .then(response => response.json())
+            .then(data => {
+                const content = atob(data.content); // Decode the base64 content
+                const participants = content.match(/## Participants([\s\S]*?)\n\n/);
+                if (participants) {
+                    const participantsList = participants[1].trim().split('\n').slice(1); // Get lines after the header
+                    const participantsUl = document.getElementById("participants");
+                    participantsList.forEach(participant => {
+                        const li = document.createElement("li");
+                        li.textContent = participant.trim();
+                        participantsUl.appendChild(li);
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching participants:', error));
     </script>
 </body>
 </html>
