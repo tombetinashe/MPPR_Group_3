@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Collaboration in Git</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="animation-fade-in">
+    <!-- Sidebar Menu -->
+    <div id="menu">
+        <p class="link-home">
+            <a href="../index.html" style="color: #fff;">Git Tutorials</a>
+        </p>
+        <nav>
+            <ol>
+                <li><a href="lab_00.html">Introduction</a></li>
+                <li><a href="lab_01.html">Setup</a></li>
+                <li><a href="lab_02.html">Create a Project</a></li>
+                <li><a href="lab_03.html" class="active">Collaboration</a></li>
+                <!-- Add other lab links here -->
+                <li><a href="lab_53.html">Thank You</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content">
+        <h1 class="lab_title"><em>Lab 3: </em> Collaboration in Git</h1>
+        
+        <h2>Goals</h2>
+        <ul>
+            <li>Learn how to clone a repository.</li>
+            <li>Create and switch to a new branch.</li>
+            <li>Add files, commit changes, and push to your remote branch.</li>
+            <li>Understand the process of making a pull request.</li>
+        </ul>
+
+        <h2>Cloning the Repository</h2>
+        <p>To get started, you will clone the following repository to your local machine:</p>
+        <pre><code>git clone https://github.com/VincentSD/GWAC-MPPR.git</code></pre>
+        <p>This command will create a local copy of the repository on your machine.</p>
+
+        <h2>Navigating to the Submissions Folder</h2>
+        <p>After cloning, navigate into the repository and then into the <strong>submissions</strong> folder:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>cd GWAC-MPPR</pre>
+            <pre>cd submissions</pre>
+        </div>
+
+        <h2>Creating Your Submission File</h2>
+        <p>Inside the <strong>submissions</strong> folder, create a text file with your name in the format <code>FirstnameLastname.txt</code>:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>touch FirstnameLastname.txt</pre>
+        </div>
+        <p>Open this file and add some content, then save and close it.</p>
+
+        <h2>Creating a New Branch</h2>
+        <p>Now, you will create a new branch for your changes. Use the following command, replacing <code>your-branch-name</code> with a descriptive name:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git checkout -b your-branch-name</pre>
+        </div>
+
+        <h2>Adding and Committing Your Changes</h2>
+        <p>Next, you need to add your new file to the staging area and commit your changes:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git add FirstnameLastname.txt</pre>
+            <pre>git commit -m "Add my submission file"</pre>
+        </div>
+
+        <h2>Pushing to Your Remote Branch</h2>
+        <p>After committing your changes, push your branch to the remote repository:</p>
+        <h3><b>Execute:</b></h3>
+        <div class="instructions">
+            <pre>git push origin your-branch-name</pre>
+        </div>
+
+        <h2>Making a Pull Request</h2>
+        <p>Once your branch is pushed, go to the GitHub repository page. You should see a prompt to create a pull request. Click on it, provide a title and description for your PR, then submit it.</p>
+
+        <h2>Understanding Branching and Merging</h2>
+        <p>Branching allows you to work on features or fixes without affecting the main codebase. After your pull request is reviewed and approved, it can be merged into the main branch, integrating your changes.</p>
+
+        <!-- Navigation between labs -->
+        <nav class="foot-navigation">
+            <a class="start" href="lab_02.html">Prev</a>
+            <a class="start" href="lab_04.html">Next</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>❤️ Maintained with love for our dear friend <a href="https://en.wikipedia.org/wiki/Jim_Weirich" target="_blank">Jim Weirich</a>.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
