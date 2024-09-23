@@ -23,27 +23,66 @@
 
     <a class="start" href="labs/lab_00.html">Start Git</a>
 
-
     <div class="footer">
-        <p>This is an adaptation of GitImmersion</p>
+        <p>This is an adaptation of GitImmersion ️️❤️  Maintained for GWAC-MPPR</p>
         <p>
             GitImmersion is released under a
             <a href="http://creativecommons.org/licenses/by-nc-sa/3.0" target="_blank" rel="noopener">Creative Commons BY-NC-SA 3.0 License.</a>
         </p>
-        <p>️️❤️  Maintained with love for our dear friend <a href="https://en.wikipedia.org/wiki/Jim_Weirich" target="_blank" rel="noopener">Jim Weirich</a>.</p>
     </div>
 
     <div>
         <h1>Welcome to the Submission Portal</h1>
         <p>Please take note:</p>
-        <p>If your Pull Request for the assignment on colloboration gets accepted, you will see you submission listed below.</p>
+        <p>If your Pull Request for the assignment on collaboration gets accepted, you will see your submission listed below.</p>
         <h2 style="text-align: center;">Recent Submissions:</h2>
-        <div id="submissions">
-            <!-- Text file submissions will be loaded here -->
-        </div>
+        
+        <table id="submissions" border="1" style="width: 100%; text-align: left;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time Submitted</th>
+                    <th>Download Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Text file submissions will be loaded here -->
+            </tbody>
+        </table>
     </div>
 
     <!-- Link to external JavaScript file -->
-    <script src="js/script.js"></script>
+    <script>
+        fetch("https://api.github.com/repos/vincentsd/GWAC-MPPR/contents/submissions/")
+            .then(response => response.json())
+            .then(data => {
+                const submissionsTableBody = document.querySelector("#submissions tbody");
+                data.forEach(file => {
+                    if (file.name.endsWith(".txt")) {
+                        const row = document.createElement("tr");
+
+                        const nameCell = document.createElement("td");
+                        nameCell.textContent = file.name;
+                        row.appendChild(nameCell);
+
+                        // For demonstration, you can set the submission time
+                        // Here we just use the current time for illustration
+                        const timeCell = document.createElement("td");
+                        timeCell.textContent = new Date().toLocaleString();
+                        row.appendChild(timeCell);
+
+                        const linkCell = document.createElement("td");
+                        const fileLink = document.createElement("a");
+                        fileLink.href = file.download_url;
+                        fileLink.textContent = "Download";
+                        linkCell.appendChild(fileLink);
+                        row.appendChild(linkCell);
+
+                        submissionsTableBody.appendChild(row);
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching submissions:', error));
+    </script>
 </body>
 </html>
